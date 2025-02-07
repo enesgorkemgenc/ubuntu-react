@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+body * {
+    font-family: 'Ubuntu', serif !important;
+}
+
+#ubuntu-top-bar {
+    background-color: #131313;
+}
+
+#ubuntu-body {
+    background-image: url('./assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tabs-section {
+    background-color: #ebebeb;
+}
