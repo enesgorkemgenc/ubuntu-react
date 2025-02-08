@@ -5,10 +5,10 @@ function TopBar() {
             className="flex h-10 w-full items-center justify-between px-6"
         >
             <div className="font-normal text-gray-300">...</div>
-            <div className="font-normal text-gray-300">Fab 7 21:34</div>
+            <div className="font-normal text-gray-300">May 1 12:34</div>
             <div className="font-normal text-gray-300">a b c</div>
         </div>
-    )
+    );
 }
 
-export default TopBar
+export default TopBar;
