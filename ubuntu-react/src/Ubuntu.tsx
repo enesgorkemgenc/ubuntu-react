@@ -1,5 +1,5 @@
 import Body from './Body';
-import TopBar from './Components/Topbar/Topbar';
+import Topbar from './Components/Topbar/Topbar';
 
 function Ubuntu() {
     return (
@@ -7,7 +7,7 @@ function Ubuntu() {
             id="ubuntu-container"
             className="flex h-screen w-screen grid-cols-12 grid-rows-24 flex-col select-none"
         >
-            <TopBar />
+            <Topbar />
             <Body />
         </div>
     );

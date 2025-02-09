@@ -12,11 +12,7 @@ body * {
     font-family: 'Ubuntu', serif !important;
 }
 
-#ubuntu-top-bar {
-    background-color: #131313;
-}
-
-#ubuntu-body {
+#ubuntu-container {
     background-image: url('./assets/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
