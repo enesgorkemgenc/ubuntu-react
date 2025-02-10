@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Network from './Tabs/Network';
 
 const LOCAL_STORAGE_LAST_SELECTED_TAB_KEY = 'settings-last-selected-tab';
@@ -40,17 +40,17 @@ const Settings: React.FC = () => {
             { key: 'system', tabLabel: 'System', icon: 'S' }
         ]
     ];
-
     const defaultActiveTab =
         localStorage.getItem(LOCAL_STORAGE_LAST_SELECTED_TAB_KEY) ?? 'network';
 
     const [activeTab, setActiveTab] = useState(defaultActiveTab);
 
+    const settingsRef = useRef(null);
+
     function handleTabSelection(selectedTab: string) {
         localStorage.setItem(LOCAL_STORAGE_LAST_SELECTED_TAB_KEY, selectedTab);
         setActiveTab(selectedTab);
     }
-
     function getTabContent(tab: string) {
         switch (tab) {
             case 'network':
@@ -58,8 +58,19 @@ const Settings: React.FC = () => {
         }
     }
 
+    useEffect(() => {
+        settingsRef.current?.addEventListener('dragstart', function (event) {
+            console.log('here');
+
+            event.dataTransfer.setData('text', event.target.id);
+        });
+    }, []);
+
     return (
-        <div className="flex h-150 w-240 border-collapse flex-row overflow-hidden rounded-xl border-2 border-gray-300 bg-white shadow-lg">
+        <div
+            ref={settingsRef}
+            className="flex h-150 w-240 border-collapse flex-row overflow-hidden rounded-xl border-2 border-gray-300 bg-white shadow-lg"
+        >
             <div className="tabs-section gap flex w-1/4 flex-col border-r-2 border-r-gray-200">
                 <div className="flex flex-col pt-2">
                     <div className="flex flex-row justify-between px-5">

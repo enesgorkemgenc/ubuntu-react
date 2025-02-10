@@ -11,5 +11,4 @@ function Sidebar() {
         </div>
     );
 }
-8;
 export default Sidebar;
