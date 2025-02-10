@@ -13,7 +13,7 @@ const FormGroup: React.FC<FormGroupProps> = ({ title }) => {
             </div>
             <div
                 className={
-                    'flex h-13 w-full flex-col rounded-xl border-1 border-gray-200 bg-white shadow-sm transition-colors duration-200'
+                    'flex h-13 w-full flex-col rounded-xl border-1 border-gray-300 bg-white shadow-sm transition-colors duration-200'
                 }
             ></div>
         </div>
