@@ -15,7 +15,7 @@ const FormGroup: React.FC<FormGroupProps> = (props: FormGroupProps) => {
             </div>
             <div
                 className={
-                    'flex h-13 w-full flex-col flex-row items-center rounded-xl border-1 border-gray-300 bg-white px-3 shadow-sm transition-colors duration-200'
+                    'flex h-13 w-full flex-col flex-row items-center overflow-hidden rounded-xl border-1 border-gray-300/60 bg-white shadow-sm transition-colors duration-200'
                 }
             >
                 {props.children}

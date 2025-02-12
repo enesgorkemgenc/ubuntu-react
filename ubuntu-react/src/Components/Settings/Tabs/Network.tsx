@@ -12,19 +12,17 @@ const Network: React.FC = () => {
         <div className="flex w-full flex-1 flex-col gap-9">
             <FormGroup
                 title="Wired"
-                helperElements={
-                    <AddButton
-                        onClick={() => {
-                            console.log('123');
-                        }}
-                    />
-                }
+                helperElements={<AddButton onClick={() => {}} />}
             >
                 <FormField
                     label={`${wiredConnected ? 'Connected - ' : ''}1,000 Mb/s`}
+                    clickable={true}
+                    onClick={() => {
+                        setWiredConnected(!wiredConnected);
+                    }}
                 >
                     <Toggle
-                        defaultChecked={true}
+                        checked={wiredConnected}
                         onToggle={(newValue) => {
                             setWiredConnected(newValue);
                         }}

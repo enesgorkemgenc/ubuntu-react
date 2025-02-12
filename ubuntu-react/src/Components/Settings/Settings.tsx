@@ -60,8 +60,6 @@ const Settings: React.FC = () => {
 
     useEffect(() => {
         settingsRef.current?.addEventListener('dragstart', function (event) {
-            console.log('here');
-
             event.dataTransfer.setData('text', event.target.id);
         });
     }, []);
